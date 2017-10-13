@@ -62,6 +62,6 @@ body {
 }
 
 .numbered_list ul {
-    list-style-image: url('/module-3/img/arrow.png');
+    list-style-image: url('../img/arrow.png');
     padding: 10px 0 0 40px;
 }
