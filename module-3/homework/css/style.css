@@ -1,3 +1,5 @@
+/* =================== General =================== */
+
 body {
     background: url("../img/background_image.png") no-repeat;
     padding: 100px 0 100px 0;
@@ -6,19 +8,20 @@ body {
 .wrapper {
     margin: auto;
     padding: 40px;
-    width: 480px;
+    max-width: 480px;
     min-height: 100%;
     background: white;
 }
+
+/* =================== Fonts =================== */
 
 .wrapper div:first-child>h2 {
     margin-top: 0;
 }
 
-.wrapper img {
-    width: 100%;
-    height: auto;
-    padding: 20px 0 20px 0;
+.wrapper p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb( 78, 80, 80);
 }
 
 .wrapper h2 {
@@ -41,10 +44,7 @@ body {
     color: rgb( 38, 53, 85);
 }
 
-.wrapper p {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb( 78, 80, 80);
-}
+/* =================== Item list =================== */
 
 ul {
     padding-left: 0;
@@ -64,10 +64,22 @@ li {
     padding-left: 30px;
 }
 
-hr {
-    margin-top: 40px;
-}
-
 .list_item ul {
     margin-bottom: 0;
+}
+
+/* =================== Other =================== */
+
+.wrapper > div:nth-child(2) {
+    border-bottom: 1px solid gray;
+}
+
+.wrapper > div:nth-child(2) > ul {
+    margin-bottom: 40px;
+}
+
+.wrapper img {
+    width: 100%;
+    height: auto;
+    padding: 20px 0 20px 0;
 }
