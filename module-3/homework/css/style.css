@@ -56,7 +56,16 @@ li {
     padding-left: 0;
 }
 
-.list_item div {
+div:nth-of-type(4) div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+div:nth-of-type(4) ul {
+    padding-left: 30px;
+}
+
+/* .list_item div {
     display: inline-block;
     vertical-align: top;
 }
@@ -67,7 +76,7 @@ li {
 
 .list_item ul {
     margin-bottom: 0;
-}
+} */
 
 /* =================== Other =================== */
 
