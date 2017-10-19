@@ -2,7 +2,7 @@
 body {
     background: url('.././img/background.jpg') no-repeat;
     margin: 30px 20px;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .wrapper {
