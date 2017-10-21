@@ -1,0 +1,168 @@
+/* ========== General ========== */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom, lightblue 20%, darkturquoise 40%, blue 70%, navy 100%);
+    /* height: 100vh; */
+}
+
+.wrapper {
+    width: 960px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+}
+
+
+/* ========== Task one ========== */
+.task_1 {
+    font-size: 0;
+}
+
+.task_1 ul {
+    box-sizing: border-box;
+    background: hsla(209, 21%, 46%, 0.5);
+    width: 100%;
+    height: 80px;
+    padding: 30px 20px;
+}
+
+.task_1 li {
+    display: inline-block;
+    margin-right: 20px;
+    background: hsl(209, 31%, 45%);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px hsl(202, 65%, 27%);
+    vertical-align: middle;
+    opacity: 0.6;
+}
+
+.task_1 a {
+    width: calc((920px - 100px)/6);
+    text-align: center;
+    display: inline-block;
+}
+
+.task_1 li:nth-last-of-type(1) {
+    margin-right: 0;
+}
+
+.task_1 li:hover {
+    opacity: 1;
+}
+
+/* ========== Task two ========== */
+.task_2 li {
+    margin-top: 10px;
+    color: #0E1116;
+    display: inline-block;
+    background: #88292F;    
+}
+
+.task_2 li:nth-of-type(3n) {
+    background: #5DB7DE;
+}
+
+.task_2 li:nth-of-type(3n+2) {
+    background: #0D5D56;
+}
+
+/* ========== Task three ========== */
+.task_3 ul {
+    list-style: none;
+}
+
+.task_3 li::before {
+    content: "\2192";
+    padding-right: 10px;
+    color: rgba(250, 47, 1, 0.377);;
+}
+
+/* ========== Task four ========== */
+.task_4 p {
+    text-indent: 20px;    
+}
+
+.task_4 ul {
+    padding-left: 40px;
+}
+
+.task_4 p:target {
+    color: red;
+}
+
+/* ========== Task five ========== */
+.task_5 table,
+.task_5 th,
+.task_5 td {
+    border: 1px solid gray;
+}
+
+.task_5 td:nth-last-of-type(1) {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ========== Task six ========== */
+.wrapper_task {
+    width: 100%;
+    height: 240px;
+    background: hsla(120, 100%, 50%, 0.6);
+    font-size: 0;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.content {
+    background: hsla(150, 80%, 40%, 0.8);
+}
+
+.aside {
+    background: hsla(100, 50%, 20%, 1)
+}
+
+.content,
+.aside {
+    display: inline-block;
+    width: calc(960px / 2);
+    height: 200px;
+}
+
+/* ========== Task seven ========== */
+.task_7 {
+    counter-reset: counter;
+}
+
+.task_7 ul {
+    list-style: none;
+}
+
+.task_7 li {
+    counter-increment: counter;
+}
+
+.task_7 li::before {
+    content: counter(counter);
+    margin-right: 10px;
+}
+
+/* ========== Tipography ========== */
+.task_1 a {
+    font-size: 18px;
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+}
+
+.task_1 h2,
+.task_2 h2,
+.task_3 h2,
+.task_4 h2,
+.task_5 h2,
+.task_6 h2,
+.task_7 h2 {
+    text-align: center;
+    font-size: 24px;
+}
