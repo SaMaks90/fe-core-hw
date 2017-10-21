@@ -142,11 +142,15 @@ body {
 
 .task_7 li {
     counter-increment: counter;
+    padding: 10px 0;
 }
 
 .task_7 li::before {
     content: counter(counter);
     margin-right: 10px;
+    background: hsla(96, 9%, 66%, 0.2);
+    padding: 10px;
+    vertical-align: middle;
 }
 
 /* ========== Tipography ========== */
