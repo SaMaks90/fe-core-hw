@@ -132,6 +132,7 @@ aside {
     width: 50%;
     display: inline-block;
     margin-top: 15px;
+    vertical-align: top;
 }
 
 .list_item li::before {
