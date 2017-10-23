@@ -1,0 +1,172 @@
+/* ========== General ========== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('.././img/background_page.png');
+    background-size: cover;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background: hsla(0, 0%, 100%, 1);
+    max-width: 1024px;
+    margin: auto;
+    padding: 80px 50px;
+    font-size: 0;
+}
+
+.article_profile div,
+.article_offer div {
+    margin-top: 50px;
+}
+
+.article_offer > aside div {
+    margin-top: 20px;
+}
+
+main,
+aside {
+    display: inline-block;
+    vertical-align: top;
+}
+
+main {
+    width: 70%;
+    margin-right: 5%;
+}
+
+aside {
+    width: 25%;
+}
+
+/* ========== Article one ========== */
+.article_profile img {
+    max-width: 400px;
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+.article_profile {
+    border-bottom: 0.3px solid hsla(120, 3%, 60%, 0.8);
+    padding-bottom: 50px;
+}
+
+.article_profile > main p:nth-last-of-type(1){
+    clear: both;
+}
+
+.article_profile ol {
+    list-style: none;
+    counter-reset: counter;
+}
+
+.article_profile > aside h3,
+.article_profile > aside p {
+    margin-left: 45px;
+}
+
+.article_profile li {
+    margin-top: 20px;
+    counter-increment: counter;    
+}
+
+.article_profile li::before {
+    content: counter(counter);
+    margin-top: 5px;
+    border-radius: 25px;
+    padding: 6px 10px;
+    border: 1px solid lightgray;
+    background: #38afe5;
+    float: left;
+    color: #fff;
+}
+
+/* ========== Article two ========== */
+.article_offer {
+    padding-top: 50px;
+}
+
+.comment {
+    background: url('.././img/comment.png') 100%;
+    background-size: 100% 100%;
+    padding: 15px 15px 40px 15px;
+}
+
+.article_offer > aside h4,
+.article_offer > aside h5 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.article_offer > aside h5 {
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.article_offer > aside h3::before {
+    content: "\201C \00A0";
+}
+
+.article_offer > aside h3::after {
+    content: "\00A0 \201D";
+}
+
+.article_offer ul {
+    width: 95%;
+}
+
+.list_item li {
+    width: 50%;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.list_item li::before {
+    content: "\2192";
+    float: left;
+    margin-right: 15px;
+    color: #38afe5;
+}
+
+.article_offer .list_item {
+    margin-top: 25px;
+}
+
+/* ========== Tipography ========== */
+h2 {
+    font-size: 26px;
+    font-family: "PathwayGothicOne";
+    color: rgb( 38, 53, 85 );
+    text-transform: uppercase;
+}
+
+h3,
+h4, 
+h5,
+.list_item li {
+    font-size: 15px;
+    font-family: "Arial";
+    color: rgb( 38, 53, 85 );
+    line-height: 1.267;
+}
+
+p {
+    font-size: 14px;
+    font-family: "Arial";
+    color: rgb( 78, 80, 80 );
+    line-height: 1.462;
+    margin-top: 10px;
+}
+
+.list_item li {
+    font-weight: bold;
+} 
+
+.article_profile li {
+    font-size: 15px;
+}
