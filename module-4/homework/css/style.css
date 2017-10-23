@@ -29,22 +29,22 @@ body {
     margin-top: 20px;
 }
 
-main,
+section,
 aside {
     display: inline-block;
     vertical-align: top;
 }
 
-main {
+section {
     width: 75%;
 }
 
-.main_wrapper {
+.section_wrapper {
     margin-right: 5%;
 }
 
-.article_profile .main_wrapper,
-.article_offer .main_wrapper {
+.article_profile .section_wrapper,
+.article_offer .section_wrapper {
     margin-top: 0;
 }
 
@@ -64,7 +64,7 @@ aside {
     padding-bottom: 50px;
 }
 
-.article_profile > main p:nth-last-of-type(1){
+.article_profile > section p:nth-last-of-type(1){
     clear: both;
 }
 
