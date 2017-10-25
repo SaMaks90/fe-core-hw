@@ -60,7 +60,7 @@ aside {
 }
 
 .article_profile {
-    border-bottom: 0.3px solid hsla(120, 3%, 60%, 0.8);
+    border-bottom: 1px solid hsla(120, 3%, 60%, 0.8);
     padding-bottom: 50px;
 }
 
@@ -99,11 +99,65 @@ aside {
     padding-top: 50px;
 }
 
-.comment {
+/* ==================== Comment ==================== */
+/* .comment {
+    box-sizing: border-box;
+    width: 100%;
     background: url('.././img/comment.png') 100%;
     background-size: 100% 100%;
     padding: 15px 15px 40px 15px;
+} */
+.article_offer > aside > div div {
+    margin-top: 0;
 }
+
+.comment {
+    width: 250px;
+    height: 155px;
+    background: lightgray;
+    padding-top: 0;
+    border-radius: 5px;
+  }
+  
+#comment_block {
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+    background: #fcfafa;
+    width:248px;
+    height: 153px;
+    top: 9px;
+    left: 9px;
+    margin-left: 1px;
+    margin-top: 1px;
+    overflow: hidden;
+  }
+  
+.triangle_back {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-top: 50px solid lightgray;
+    position: relative;
+    margin-left: calc((250px - 60px) / 2);
+}
+  
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-top: 50px solid #fcfafa;
+    position: absolute;
+    left: -30px;
+    top: -53px;
+  }
+
+/* ==================== Comment ==================== */
 
 .article_offer > aside h4,
 .article_offer > aside h5 {
