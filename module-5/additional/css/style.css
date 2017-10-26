@@ -1,0 +1,214 @@
+/* ========== Variable ========== */
+:root {
+    --color-dorsa: rgb( 38, 53, 85 );;
+    --font-family-dorsa: "Dorsa";
+    --color-poth: rgb(255, 255, 255);
+    --font-family-poth: "PathwayGothicOne";
+    --background-color: rgb(55, 117, 146);
+    --color-white: #fff;
+}
+
+/* ========== General ========== */
+body {
+    background: lightgray;
+}
+
+.wrapper {
+    padding: 20px;
+    margin: auto;
+    max-width: 1024px;
+    background: var(--color-white);
+    min-height: 100%;
+}
+
+/* ========== Task one ========== */
+.task_one > div {
+    background: var(--background-color);
+    display: inline-block;
+    padding: 10px;
+}
+
+/* ========== Tasks two and four ========== */
+.task_two {
+    font-size: 0;
+}
+
+.task_two .navigation {
+    width: 100%;
+    height: 250px;
+    background: var(--background-color);
+    position: relative;
+}
+
+.task_two ul {
+    list-style-type: none;
+    padding: 53px 0;    
+}
+
+.task_two li {
+    display: inline-block;
+    margin-right: 20px;
+    width: calc((1024px - 280px)/ 6);
+    text-align: center;
+}
+
+.task_two li:nth-of-type(3) {
+    margin-right: 180px;
+}
+
+/* ========== Menu ========== */
+.menu_item {
+    display: inline-block;
+    position: relative;
+}
+
+.menu_item a:hover {
+    color: var(--color-dorsa);
+}
+
+.menu_item ul {
+    padding: 0;    
+}
+
+.submenu {
+    margin-left: 20px;
+    width: 84px;
+    display: none;
+    position: absolute;
+    background: var(--color-white);
+    border-radius: 5px;
+}
+
+.submenu::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid var(--color-white);
+    top: -5px;
+    left: 39px;
+}
+
+.submenu li {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.submenu li:nth-last-of-type(1) {
+    margin-bottom: 10px;
+}
+
+.menu_item:hover > .submenu {
+    display: block;
+}
+
+/* ========== Logo ========== */
+.logo a {
+    width: 120px;
+    height: 120px;
+    padding: 25px 0;    
+    background: var(--color-white);
+    border-radius: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    display: table-cell;
+    vertical-align: middle;    
+}
+
+.navigation_logo a {
+    padding: 25px 0;
+    position: absolute;
+    top: 10px;
+    left: 452px;
+}
+
+/* ========== Task one ========== */
+.task_three {
+    font-size: 0;    
+}
+
+.task_three div{
+    display: inline-block;
+    position: relative;
+}
+
+.left a,
+.right a {
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+    background: var(--background-color); 
+}
+
+.left a {
+    border-radius: 50px 0 0 50px;    
+}
+
+.right a {
+    border-radius: 0 50px 50px 0;        
+}
+
+.left a::before,
+.right a::before {
+    content: "";
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 32px;
+    color: var(--color-white);
+}
+
+.right a::before {
+    content: "\2192";
+    left: 8px;
+}
+
+.left a::before {
+    content: "\2190";
+    right: 8px;
+}
+
+.left a:hover::before,
+.right a:hover::before {
+    opacity: 0;
+}
+
+/* ========== Tipography ========== */
+.task_one h2,
+.task_two h2,
+.task_three h2 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.logo a,
+.navigation > .logo a{
+    text-decoration: none;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: normal; 
+    color: var(--color-dorsa);
+    font-family: var(--font-family-dorsa);
+}
+
+.task_two a {
+    font-size: 23px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-poth);
+    font-family: var(--font-family-poth);
+}  
+
+.submenu a {
+    font-size: 16px;
+    font-family: var(--font-family-poth);
+    color: rgb(107, 116, 136);
+    text-transform: uppercase;
+}  
