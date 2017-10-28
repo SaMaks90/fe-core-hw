@@ -162,10 +162,46 @@ header>nav li:nth-last-of-type(1) {
 /* ==================== Slider ==================== */
 
 .slider {
-    background: url(".././img/background_italy.png");
+    width: 100%;
     height: 550px;
-    background-size: cover;
     position: relative;
+}
+
+/* ==================== Slider show ==================== */
+
+.slider1,
+.slider2,
+.slider3,
+.slider4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-size: contain;
+}
+
+.slider1 {
+    background: url(".././img/slider1.png");
+    z-index: 1;
+    background-size: cover;
+}
+
+.slider2 {
+    background: url(".././img/slider2.png");
+    z-index: 2;
+    background-size: cover;    
+}
+
+.slider3 {
+    background: url(".././img/slider3.png");
+    z-index: 3;
+    background-size: cover;    
+}
+
+.slider4 {
+    background: url(".././img/slider4.png");
+    z-index: 4;
+    background-size: cover;    
 }
 
 .slider h3:nth-of-type(1) {
@@ -179,6 +215,7 @@ header>nav li:nth-last-of-type(1) {
     text-transform: uppercase;
     color: var(--color-blue);
     border: 1px solid lightgrey;
+    z-index: 5;
 }
 
 .slider h3:nth-of-type(2) {
@@ -190,6 +227,7 @@ header>nav li:nth-last-of-type(1) {
     text-transform: uppercase;
     font-size: 30px;
     color: var(--color-white);
+    z-index: 5;    
 }
 
 /* ========== Circle ========== */
@@ -199,6 +237,7 @@ header>nav li:nth-last-of-type(1) {
     position: absolute;
     bottom: 40px;
     left: 40px;
+    z-index: 5;    
 }
 
 .slider > div div {
@@ -230,6 +269,7 @@ header>nav li:nth-last-of-type(1) {
     font-weight: bold;
     top: 24px;
     color: var(--color-white);
+    z-index: 5;    
 }
 
 .right a::before {
@@ -345,9 +385,9 @@ aside a {
     width: 25px;
     height: 25px;
     text-decoration: none;
-    position: absolute;
-    bottom: 15px;
-    right: 10px;
+    position: fixed;
+    bottom: 50px;
+    /* right: 10px; */
     transform: rotate(90deg);
     background: var(--background-blue);
     padding: 4px;
@@ -356,6 +396,8 @@ aside a {
     display: inline-block;
     box-sizing: border-box;
     text-align: center;
+    z-index: 6;
+    
 }
 
 aside a:before {
