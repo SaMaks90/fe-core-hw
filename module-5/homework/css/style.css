@@ -1,0 +1,364 @@
+/* ==================== Variable ==================== */
+
+:root {
+    --wrapper-width: 1024px;
+    --ff-dorsa: "Dorsa";
+    --ff-pgo: "PathwayGothicOne";
+    --ff-os: "OpenSans";
+    --ff-ar: "Arial";
+    --color-blue: rgb( 38, 53, 85);
+    --color-white: rgb(255, 255, 255);
+    --color-submenu: rgb(107, 116, 136);
+    --color-lightgray: rgb(203, 198, 198);
+    --background-blue: rgb(56, 175, 229);
+    --background-dest: rgb(25, 49, 73);
+    --color-black: rgb(0, 0, 0);
+}
+
+
+/* ==================== General ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(".././img/background.png");
+    background-size: cover;
+}
+
+.wrapper {
+    width: var(--wrapper-width);
+    padding: 40px 0;
+    margin: auto;
+}
+
+
+/* ==================== Header ==================== */
+
+header {
+    position: relative;
+    padding: 50px 0;
+}
+
+header a {
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* ========== Logo Company ========== */
+
+.logo a {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background: var(--color-white);
+    font-family: var(--ff-dorsa);
+    font-size: 60px;
+    color: var(--color-blue);
+    box-sizing: border-box;
+    padding: 25px 0;
+    position: absolute;
+    top: 3px;
+    left: 452px;
+}
+
+
+/* ========== Navigation ========== */
+
+nav {
+    padding: 0 15px;
+    font-size: 0;
+}
+
+nav a {
+    font-size: 23px;
+    font-family: var(--ff-pgo);
+    color: var(--color-white);
+}
+
+header>nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header>nav li {
+    text-align: center;
+    margin-right: 20px;
+    display: inline-block;
+    width: calc((var(--wrapper-width) - 300px) / 6);
+}
+
+header>nav li:nth-of-type(3) {
+    margin-right: 180px;
+}
+
+header>nav li:nth-last-of-type(1) {
+    margin-right: 0;
+}
+
+.menu_item {
+    border-bottom: 20px solid transparent;
+}
+
+.menu_item a:hover {
+    color: var(--color-blue);
+}
+
+.menu_item ul {
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.submenu {
+    border-radius: 5px;
+    background: var(--color-white);
+    width: 80px;
+    position: absolute;
+    display: none;
+    top: 90px;
+}
+
+.submenu::before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--color-white);
+    top: -6px;
+    left: 35px;
+    position: absolute;
+}
+
+.submenu li {
+    width: 80px;
+    margin-right: 0;
+    text-align: center;
+}
+
+.submenu a {
+    font-size: 16px;
+    color: var(--color-submenu);
+}
+
+.menu_item:hover>.submenu {
+    display: block;
+}
+
+/* ==================== Wrapper main ==================== */
+
+.wrapper_main {
+    padding: 40px 40px 80px;
+    background: #fff;
+    width: 100%;
+    margin-top: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* ==================== Slider ==================== */
+
+.slider {
+    background: url(".././img/background_italy.png");
+    height: 550px;
+    background-size: cover;
+    position: relative;
+}
+
+.slider h3:nth-of-type(1) {
+    margin: 0;
+    padding: 10px;
+    background: var(--color-white);
+    position: absolute;
+    top: 200px;
+    font-size: 20px;
+    font-family: var(--ff-pgo);
+    text-transform: uppercase;
+    color: var(--color-blue);
+    border: 1px solid lightgrey;
+}
+
+.slider h3:nth-of-type(2) {
+    padding: 10px;
+    position: absolute;
+    top: 244px;
+    background: var(--background-blue);
+    font-family: var(--ff-pgo);
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--color-white);
+}
+
+/* ========== Circle ========== */
+
+.slider > h3 + div {
+    font-size: 0;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.slider > div div {
+    display: inline-block;
+    position: relative;
+}
+
+.left a,
+.right a {
+    display: inline-block;
+    width: 35px;
+    height: 70px;
+    background: var(--background-blue);
+}
+
+.left a {
+    border-radius: 35px 0 0 35px;
+}
+
+.right a {
+    border-radius: 0 35px 35px 0;
+}
+
+.left a::before,
+.right a::before {
+    content: "";
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    top: 24px;
+    color: var(--color-white);
+}
+
+.right a::before {
+    content: "\2192";
+    left: 5px;
+}
+
+.left a::before {
+    content: "\2190";
+    right: 5px;
+}
+
+.left a:hover::before,
+.right a:hover::before {
+    opacity: 0;
+}
+
+/* ==================== Destination ==================== */
+
+.destination {
+    font-size: 0;
+    position: relative;
+}
+
+.destination h2 {
+    font-size: 32px;
+    font-family: var(--ff-pgo);
+    text-transform: uppercase;
+    color: var(--color-blue);
+    padding: 50px 0;
+}
+
+.destination section {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.destination_one,
+.destination_two,
+.destination_three {
+    background-size: cover;
+    width: calc(904px / 3);
+    height: 200px;
+    margin-right: 20px;
+}
+
+.destination_one {
+    background: url(".././img/venice.png");
+}
+
+.destination_two {
+    background: url(".././img/new_york.png");
+}
+
+.destination_three {
+    background: url(".././img/paris.png");
+    margin-right: 0;
+}
+
+
+/* ========== Sub destination ========== */
+
+.sub_destination {
+    display: none;
+    position: absolute;
+    background: var(--background-dest);
+    width: 50%;
+    height: 100%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+
+.sub_destination h3 {
+    font-family: var(--ff-os);
+    font-size: 22px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+}
+
+.sub_destination p {
+    padding-top: 10px;
+    text-align: justify;
+    font-family: var(--ff-ar);
+    font-size: 13px;
+    color: var(--color-lightgray);
+}
+
+.sub_destination a {
+    font-family: var(--ff-ar);
+    font-size: 12px;
+    text-align: center;
+    color: var(--color-black);
+    text-decoration: none;
+    background: var(--color-white);
+    border-radius: 5px;
+    padding: 3px;
+    position: absolute;
+    bottom: 15px;
+    left: 100px;
+}
+
+.destination_one:hover>.sub_destination,
+.destination_two:hover>.sub_destination,
+.destination_three:hover>.sub_destination {
+    display: block;
+    position: relative;
+}
+
+/* ==================== Top ==================== */
+aside a {
+    width: 25px;
+    height: 25px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    transform: rotate(90deg);
+    background: var(--background-blue);
+    padding: 4px;
+    font-weight: bold;
+    border-radius: 25px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+aside a:before {
+    content: "\003C";
+    color: var(--color-lightgray);
+}

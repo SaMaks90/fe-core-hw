@@ -1,6 +1,6 @@
 /* ========== Variable ========== */
 :root {
-    --color-dorsa: rgb( 38, 53, 85 );;
+    --color-dorsa: rgb( 38, 53, 85 );
     --font-family-dorsa: "Dorsa";
     --color-poth: rgb(255, 255, 255);
     --font-family-poth: "PathwayGothicOne";
@@ -71,12 +71,13 @@ body {
 }
 
 .submenu {
-    margin-left: 20px;
-    width: 84px;
     display: none;
     position: absolute;
-    background: var(--color-white);
+    padding-top: 50px;
+    margin-left: 20px;
+    width: 84px;
     border-radius: 5px;
+    background: var(--color-white);            
 }
 
 .submenu::before {
