@@ -151,7 +151,7 @@ header>nav li:nth-last-of-type(1) {
 /* ==================== Wrapper main ==================== */
 
 .wrapper_main {
-    padding: 40px 0 40px 40px;
+    padding: 40px 0 10px 40px;
     background: #fff;
     width: 100%;
     margin-top: 40px;
@@ -303,7 +303,7 @@ aside {
 /* ==================== Destination ==================== */
 
 .destination {
-    padding-bottom: 40px;
+    padding-bottom: 70px;
     font-size: 0;
     position: relative;
 }
