@@ -145,7 +145,7 @@ header>nav li:nth-last-of-type(1) {
     color: var(--color-submenu);
 }
 
-.menu_item:hover>.submenu {
+.menu_item:hover > .submenu {
     display: block;
 }
 
@@ -296,9 +296,9 @@ aside {
     right: 5px;
 }
 
-.left a:hover::before,
-.right a:hover::before {
-    opacity: 0;
+.left a:hover,
+.right a:hover {
+    opacity: 0.4;
 }
 
 /* ==================== Destination ==================== */
@@ -400,15 +400,12 @@ aside a {
     width: 25px;
     height: 25px;
     text-decoration: none;
-    /* position: relative; */
-    /* bottom: 50px; */
-    /* right: 300px; */
     transform: rotate(90deg);
     background: var(--background-blue);
-    padding: 4px;
     font-weight: bold;
     border-radius: 25px;
-    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
     box-sizing: border-box;
     text-align: center;
     z-index: 6;

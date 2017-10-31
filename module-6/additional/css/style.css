@@ -1,0 +1,117 @@
+/* ==================== General ==================== */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url(http://bestfotoposter.ru/downloads/priroda/more/6000%D1%854285-96dpi-foto-oblaka-nad-morem.jpg) no-repeat;    
+    background-size: cover;
+}
+
+.wrapper {
+    width: 1024px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    height: 100%;
+}
+
+.task_two, 
+.task_three {
+    margin-top: 20px;
+}
+
+/* ==================== Task one ==================== */
+.task_one ul {
+    position: relative;
+    list-style: none;
+    background: lightblue;
+    margin: 20px 40px;
+    padding: 10px 40px;
+    height: 40px;
+}
+
+.task_one li {
+    display: inline-block;
+}
+
+.task_one a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(".././img/sprite.png") no-repeat;    
+}
+
+.twitter a {
+    background-position: 0 0;
+}
+
+.facebook a {
+    background-position: -40px 0;
+}
+
+.googleplus a {
+    background-position: -80px 0;
+}
+
+.linkedin a {
+    background-position: -120px 0;
+}
+
+.task_one a:hover {
+    filter: invert(67%);
+}
+
+/* ==================== Task two ==================== */
+.container_gallery {
+    margin: 0 41px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item_01,
+.item_02,
+.item_03,
+.item_04,
+.item_05,
+.item_06 {
+    margin-top: 20px;
+    width: 288px;
+    height: 154px;
+    background: url(".././img/image.png") no-repeat;
+    background-position: 0 -20px;
+}
+
+/* ==================== Task three ==================== */
+.task_three a {
+    text-decoration: none;
+}
+
+.task_three ul {
+    list-style: none;
+}
+
+.container_list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.container_list h3 {
+    margin: 20px 0;
+}
+
+.container_list li::before{
+    content: "\2192";
+    margin-right: 5px;
+}
+
+.container_list li {
+    margin-top: 5px;
+}
+
+.container_list > ul li:nth-of-type(1) {
+    margin-top: 0;
+}
