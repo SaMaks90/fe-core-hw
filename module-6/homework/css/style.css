@@ -521,10 +521,9 @@ body {
 
 /* ==================== Bottom back ==================== */
 .bottom_back {
-    display: inline-block;
-    position: sticky;
-    bottom: 10px;
-    height: 100%;
+    position: fixed;
+    bottom: 310px;
+    left: 1130px;
 }
 
 .bottom_back a {
