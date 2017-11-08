@@ -1,0 +1,206 @@
+/* ==================== Content ==================== */
+/* ==================== Home page ==================== */
+.home_page {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== Slider ==================== */
+.sliders {
+    position: relative;
+    height: 579px;
+    width: 100%;
+}
+
+.slider_one,
+.slider_two,
+.slider_three,
+.slider_four {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.slider_one {
+    background: url(".././img/home/slider_1.jpg");
+    background-size: cover;
+    z-index: 1;    
+}
+
+.slider_two {
+    background: url(".././img/home/slider_2.jpg");
+    z-index: 2;
+    background-size: cover;
+}
+
+.slider_three {
+    background: url(".././img/home/slider_3.jpg");
+    z-index: 3;
+    background-size: cover;
+    background-position: 0 -230px;
+}
+
+.slider_four {
+    background: url(".././img/home/slider_4.jpg");
+    z-index: 4;
+    background-size: cover;    
+}
+
+.home_page > .sliders h2 {
+    position: absolute;
+    z-index: 4;
+    background: var(--bg-white);
+    top: 220px;
+    border-left: 1px solid var(--bor-detalis);
+    padding: 10px 20px;
+    font-size: 23px;
+}
+
+.home_page > .sliders h3 {
+    position: absolute;
+    z-index: 4;
+    background: var(--bg-li);
+    color: var(--color-white);
+    padding: 10px 20px;
+    font-size: 35px;
+    font-family: var(--ff-pgo);
+    text-transform: uppercase;
+    top: 267px;
+    border-left: 1px solid var(--bor-detalis);
+}
+
+.circle {
+    display: flex;
+    position: absolute;
+    z-index: 4;
+    bottom: 40px;
+    left: 30px;
+}
+
+.circle a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 24px;
+}
+
+.circle a::before {
+    position: absolute;
+    top: 36px;
+    font-weight: bold;
+}
+
+.left a,
+.right a {
+    display: block;
+    width: 50px;
+    height: 100px;
+    background: var(--bg-li);
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.left a {border-radius: 50px 0 0 50px;}
+.right a {border-radius: 0 50px 50px 0;}
+
+.left a::before {
+    content: "\2190";
+    right: 8px;
+}
+
+.right a::before {
+    content: "\2192";
+    left: 8px;
+}
+
+.left a:hover,
+.right a:hover {
+    opacity: 0.4;
+}
+
+/* ==================== Destination ==================== */
+.destination {
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+
+.destination ul {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.destination li {
+    width: 288px;
+    height: 270px;
+    background: url(".././img/home/destination_1.jpg");    
+}
+
+.destination li:nth-of-type(2) {
+    background: url(".././img/home/destination_2.jpg")
+}
+
+.destination li:nth-last-of-type(1) {
+    background: url(".././img/home/destination_3.jpg");
+}
+
+/* ==================== Animation ==================== */
+.sub_destination {
+    background: transparent;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    transition: padding 1s linear, background 1s linear 0.3s;
+}
+
+.destination li:hover > .sub_destination {
+    background: var(--bg-footer);
+    padding: 10px;
+}
+
+.sub_destination h3 {
+    font-family: var(--ff-opensans);
+    text-transform: uppercase;
+    font-size: 32px;
+    color: transparent;
+    transition: color 0.5s linear 1s;
+    text-align: center;
+}
+
+.destination li:hover > .sub_destination h3 {
+    color: var(--color-white);
+}
+
+.sub_destination p {
+    margin-top: 10px;
+    font-family: var(--ff-arial);
+    font-size: 13px;
+    color: transparent;
+    transition: color 0.4s linear 800ms;
+}
+
+.destination li:hover > .sub_destination p {
+    color: var(--color-destination);
+}
+
+.sub_destination a {
+    text-decoration: none;
+    font-family: var(--ff-arial);
+    font-size: 12px;
+    color: transparent;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: transparent;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    transition: color 400ms linear 400ms, background 500ms linear 200ms;
+}
+
+.destination li:hover > .sub_destination a {
+    color: var(--color-black);
+    background: var(--bg-comment);
+}

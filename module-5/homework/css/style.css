@@ -348,13 +348,15 @@ aside {
 /* ========== Sub destination ========== */
 
 .sub_destination {
-    display: none;
-    position: absolute;
+    /* display: none; */
+    position: relative;
+    opacity: 0;
     background: var(--background-dest);
     width: 50%;
     height: 100%;
     padding: 15px 10px;
     box-sizing: border-box;
+    transition: opacity 1s linear;
 }
 
 .sub_destination h3 {
@@ -391,8 +393,7 @@ aside {
 .destination_one:hover>.sub_destination,
 .destination_two:hover>.sub_destination,
 .destination_three:hover>.sub_destination {
-    display: block;
-    position: relative;
+    opacity: 1;
 }
 
 /* ==================== Top ==================== */

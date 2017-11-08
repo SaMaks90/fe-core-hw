@@ -1,0 +1,141 @@
+/* ==================== Content ==================== */  
+/* ==================== About page ==================== */
+.about_page {
+    display: flex;
+    flex-direction: column;
+}
+
+.about_page div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.about_page article {
+    flex: 70%;
+    margin-right: 5%;
+}
+
+.about_page aside {
+    flex: 25%;
+}
+
+.agency_profile img {
+    width: 360px;
+    height: 281px;
+    float: left;
+    padding: 0 10px 10px 0;
+}
+
+.about_page p {
+    margin-top: 10px;
+}
+
+.about_page h2 {
+    margin-bottom: 40px;
+}
+
+.principles_list ul,
+.principles_list li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.principles_list ul {
+    counter-reset: counter;
+}
+
+.principles_list li {
+    counter-increment: counter;
+}
+
+.principles_list li:before {
+    content: counter(counter);
+    padding: 3px 8px;
+    background: var(--bg-li);
+    color: var(--color-white);
+    border-radius: 12px;
+    margin-right: 4px;
+    font-family: var(--ff-arial);
+    font-size: 16px;
+}
+
+.principles_list p {
+    margin: 0 0 20px 29px;
+}
+
+/* ==================== Block two ==================== */
+.article_offer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.article_offer li {
+    flex: 50%;
+}
+
+.block_two {
+    border-top: 1px solid var(--bor-detalis);
+    margin-top: 50px;
+    padding-top: 40px;
+}
+
+/* ==================== Comment ==================== */
+.testimonial h2 {
+    margin-bottom: 15px;
+}
+
+.comment  {
+    border: 2px solid var(--bg-comment);
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 20px;
+    background: var(--bg-com-block);
+    top: 9px;
+    left: 9px;
+    margin-left: 1px;
+    margin-top: 1px;
+    overflow: hidden;
+}
+  
+.triangle_back {
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-top: 50px solid var(--bg-comment);
+    position: relative;
+    margin-left: calc((225px - 60px) / 2);
+}
+  
+.triangle {
+    width: 0;
+    height: 0;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-top: 50px solid var(--bg-com-block);
+    position: absolute;
+    left: -30px;
+    top: -54px;
+}
+
+.testimonial h4,
+.testimonial h5 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.testimonial h5 {
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.testimonial h3::before {
+    content: "\201C \00A0";
+}
+
+.testimonial h3::after {
+    content: "\00A0 \201D";
+}

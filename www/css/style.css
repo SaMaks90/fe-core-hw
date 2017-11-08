@@ -1,418 +1,334 @@
-/* ==================== Variable ==================== */
+/* ==================== Import ==================== */
+@import url("https://fonts.googleapis.com/css?family=Dorsa");
+@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One");
+@import url("./about.css");
+@import url("./gallery.css");
+@import url("./blog.css");
+@import url("./home.css");
+@import url("./contact.css");
+@import url("./tour.css");
 
+
+/* ==================== Variable ==================== */
 :root {
+    /* Width */
     --wrapper-width: 1024px;
+
+    /* Color */
+    --color-white: rgb(255, 255, 255);
+    --color-blue: rgb( 38, 53, 85);
+    --color-lightgray: rgb( 107, 116, 136);
+    --color-gray: rgb( 78, 80, 80);
+    --color-li: rgb( 56, 175, 229);
+    --color-black: rgb(0, 0, 0);
+    --color-blog-gray: rgb( 193, 187, 187);
+    --color-destination: rgb( 203, 198, 198);
+
+    /* Background */
+    --bg-white: rgb(255, 255, 255);
+    --bg-li: rgb( 56, 175, 229);
+    --bg-border-li: rgb( 82, 151, 182);
+    --bg-footer: rgb( 48, 69, 91);
+    --bg-detalis: rgb( 252, 246, 248);
+    --bg-comment: rgb( 233, 230, 230);
+    --bg-com-block: rgb( 252, 250, 250);
+
+    /* Border */
+    --bor-detalis: rgb( 193, 187, 187);
+
+
+    /* Font Family */
     --ff-dorsa: "Dorsa";
     --ff-pgo: "Pathway Gothic One";
-    --ff-os: "OpenSans";
-    --ff-ar: "Arial";
-    --color-blue: rgb( 38, 53, 85);
-    --color-white: rgb(255, 255, 255);
-    --color-submenu: rgb(107, 116, 136);
-    --color-lightgray: rgb(203, 198, 198);
-    --background-blue: rgb(56, 175, 229);
-    --background-dest: rgb(25, 49, 73);
-    --color-black: rgb(0, 0, 0);
+    --ff-arial: "Arial";
+    --ff-opensans: "OpenSans";
 }
 
-
 /* ==================== General ==================== */
-
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 body {
-    background: url(".././img/background.png");
+    background: url(".././img/background_body.jpg") no-repeat;
     background-size: cover;
 }
 
 .wrapper {
     width: var(--wrapper-width);
-    padding: 40px 0;
     margin: auto;
-}
-
-
-/* ==================== Header ==================== */
-
-header {
-    position: relative;
-    padding: 50px 0;
-}
-
-header a {
-    display: inline-block;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-}
-
-
-/* ========== Logo Company ========== */
-
-.logo a {
-    width: 120px;
-    height: 120px;
-    border-radius: 60px;
-    background: var(--color-white);
-    font-family: var(--ff-dorsa);
-    font-size: 60px;
-    color: var(--color-blue);
     box-sizing: border-box;
-    padding: 25px 0;
-    position: absolute;
-    top: 3px;
-    left: 452px;
 }
 
-
-/* ========== Navigation ========== */
-
-nav {
-    padding: 0 15px;
-    font-size: 0;
+/* ==================== Navigation ==================== */
+.navigation {
+    margin: 47px 94px 0;
 }
 
-nav a {
-    font-size: 23px;
+.navigation a {
+    text-decoration: none;
+    text-transform: uppercase;
     font-family: var(--ff-pgo);
+    font-size: 23px;
     color: var(--color-white);
+    border-bottom: 15px solid transparent;
+    box-sizing: border-box;
 }
 
-header>nav ul {
+.navigation a:hover {
+    color: var(--color-blue);
+}
+
+.navigation ul {
     list-style: none;
-    padding: 0;
-}
-
-header>nav li {
-    text-align: center;
-    margin-right: 20px;
-    display: inline-block;
-    width: calc((var(--wrapper-width) - 300px) / 6);
-}
-
-header>nav li:nth-of-type(3) {
-    margin-right: 180px;
-}
-
-header>nav li:nth-last-of-type(1) {
-    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu_item {
-    border-bottom: 20px solid transparent;
+    position: relative;
 }
 
-.menu_item a:hover {
-    color: var(--color-blue);
-}
-
-.menu_item ul {
-    margin-left: 15px;
-    padding: 5px;
-}
-
+.menu_item ul,
 .submenu {
-    border-radius: 5px;
-    background: var(--color-white);
-    width: 80px;
+    background: var(--bg-white);
+    display: none;    
     position: absolute;
-    display: none;
-    top: 90px;
+    top: 35px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submenu a {
+    color: var(--color-lightgray);
+    font-family: var(--ff-pgo);
+    font-size: 16px;
+}
+
+.submenu li {
+    padding: 4px 4px 0;
+    text-align: center;
+}
+
+.submenu li:nth-last-of-type(1) {
+    padding-bottom: 4px;
 }
 
 .submenu::before {
     content: "";
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid var(--color-white);
-    top: -6px;
-    left: 35px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--bg-white);   
     position: absolute;
-}
-
-.submenu li {
-    width: 80px;
-    margin-right: 0;
-    padding: 5px 0;
-    text-align: center;
-}
-
-.submenu a {
-    font-size: 16px;
-    color: var(--color-submenu);
+    top: -2px;
+    left: 17px; 
 }
 
 .menu_item:hover > .submenu {
     display: block;
 }
 
-/* ==================== Wrapper main ==================== */
-
-.wrapper_main {
-    padding: 40px 0 10px 40px;
-    background: #fff;
-    width: 100%;
-    margin-top: 60px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-main {
-    display: inline-block;
-    width: calc(1024px - 80px);
-}
-
-aside {
-    padding-top: 600px;
-    display: inline-block;
-    position: sticky;
-    bottom: 50px;
-    vertical-align: top;
-    margin-left: 4px;
-    vertical-align: bottom;
-}
-/* ==================== Slider ==================== */
-
-.slider {
-    width: 100%;
-    height: 550px;
-    position: relative;
-}
-
-/* ==================== Slider show ==================== */
-
-.slider1,
-.slider2,
-.slider3,
-.slider4 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-}
-
-.slider1 {
-    background: url(".././img/slider1.png");
-    z-index: 1;
-    background-size: cover;
-}
-
-.slider2 {
-    background: url(".././img/slider2.png");
-    z-index: 2;
-    background-size: cover;    
-}
-
-.slider3 {
-    background: url(".././img/slider3.png");
-    z-index: 3;
-    background-size: cover;    
-}
-
-.slider4 {
-    background: url(".././img/slider4.png");
-    z-index: 4;
-    background-size: cover;    
-}
-
-.slider h3:nth-of-type(1) {
-    margin: 0;
-    padding: 10px;
-    background: var(--color-white);
-    position: absolute;
-    top: 200px;
-    font-size: 20px;
-    font-family: var(--ff-pgo);
-    text-transform: uppercase;
+/* ========== Logo ========== */
+#logo {
+    font-family: var(--ff-dorsa);
     color: var(--color-blue);
-    border: 1px solid lightgrey;
-    z-index: 5;
-}
-
-.slider h3:nth-of-type(2) {
-    padding: 10px;
-    position: absolute;
-    top: 244px;
-    background: var(--background-blue);
-    font-family: var(--ff-pgo);
-    text-transform: uppercase;
-    font-size: 30px;
-    color: var(--color-white);
-    z-index: 5;    
-}
-
-/* ========== Circle ========== */
-
-.slider > h3 + div {
-    font-size: 0;
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    z-index: 5;    
-}
-
-.slider > div div {
-    display: inline-block;
-    position: relative;
-}
-
-.left a,
-.right a {
-    display: inline-block;
-    width: 35px;
-    height: 70px;
-    background: var(--background-blue);
-}
-
-.left a {
-    border-radius: 35px 0 0 35px;
-}
-
-.right a {
-    border-radius: 0 35px 35px 0;
-}
-
-.left a::before,
-.right a::before {
-    content: "";
-    position: absolute;
-    font-size: 20px;
-    font-weight: bold;
-    top: 24px;
-    color: var(--color-white);
-    z-index: 5;    
-}
-
-.right a::before {
-    content: "\2192";
-    left: 5px;
-}
-
-.left a::before {
-    content: "\2190";
-    right: 5px;
-}
-
-.left a:hover,
-.right a:hover {
-    opacity: 0.4;
-}
-
-/* ==================== Destination ==================== */
-
-.destination {
-    padding-bottom: 70px;
-    font-size: 0;
-    position: relative;
-}
-
-.destination h2 {
-    font-size: 32px;
-    font-family: var(--ff-pgo);
-    text-transform: uppercase;
-    color: var(--color-blue);
-    padding: 50px 0;
-}
-
-.destination section {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.destination_one,
-.destination_two,
-.destination_three {
-    background-size: cover;
-    width: calc(904px / 3);
-    height: 200px;
-    margin-right: 20px;
-}
-
-.destination_one {
-    background: url(".././img/venice.png");
-}
-
-.destination_two {
-    background: url(".././img/new_york.png");
-}
-
-.destination_three {
-    background: url(".././img/paris.png");
-    margin-right: 0;
-}
-
-
-/* ========== Sub destination ========== */
-
-.sub_destination {
-    display: none;
-    position: absolute;
-    background: var(--background-dest);
-    width: 50%;
-    height: 100%;
-    padding: 15px 10px;
-    box-sizing: border-box;
-}
-
-.sub_destination h3 {
-    font-family: var(--ff-os);
-    font-size: 22px;
-    color: var(--color-white);
-    text-transform: uppercase;
-    font-weight: normal;
+    font-size: 60px;
+    border-radius: 77px;
+    background: var(--bg-white);
+    width: 138px;
+    height: 138px;
+    display: block;
     text-align: center;
+    box-sizing: border-box;
+    padding: 39px 0;
 }
 
-.sub_destination p {
-    padding-top: 10px;
-    text-align: justify;
-    font-family: var(--ff-ar);
+/* ==================== Wrapper Content ==================== */
+.wrapper_content {
+    background: var(--bg-white);
+    margin-top: 44px;
+    padding: 117px 14px 20px 61px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wrapper_content main {
+    width: 902px;
+    margin-bottom: 120px;
+}
+/* ==================== Tipography content ==================== */
+/* ==================== h1-h6 ==================== */
+.wrapper_content h2 {
+    font-family: var(--ff-pgo);
+    font-size: 33px;
+    text-transform: uppercase;
+    color: var(--color-blue);
+}
+
+.post_content h4,
+.name_post h3 {
+    font-family: var(--ff-arial);
+    font-size: 16px;
+    color: var(--color-blue);
+}
+
+.about_page h3,
+.testimonial h4 {
+    font-family: var(--ff-arial);
+    font-size: 15px;
+    color: var(--color-blue);
+}
+
+/* ==================== list ==================== */
+.categories_list li,
+.archive_list a,
+.article_offer li {
+    text-decoration: none;
+    font-family: var(--ff-arial);
     font-size: 13px;
-    color: var(--color-lightgray);
+    color: var(--color-blue);
+    margin-top: 15px;
+    font-weight: bold;
 }
 
-.sub_destination a {
-    font-family: var(--ff-ar);
-    font-size: 12px;
-    text-align: center;
+.wrapper_content ul,
+.footer ul {
+    list-style: none;
+}
+
+.categories_list li:before,
+.archive_list li:before,
+.article_offer li:before {
+    content: "\2192";
+    margin-right: 10px;
+    color: var(--color-li);
+}
+
+/* ==================== Paragraph ==================== */
+ 
+.post_content p,
+.about_page p,
+.testimonial h5 {
+    font-family: var(--ff-arial);
+    font-size: 13px;
+    color: var(--color-gray);
+    margin-top: 15px;
+}
+
+/* ==================== Links ==================== */
+
+.post_content a {
+    font-family: var(--ff-arial);
+    font-size: 13px;
     color: var(--color-black);
     text-decoration: none;
-    background: var(--color-white);
-    border-radius: 5px;
-    padding: 3px;
-    position: absolute;
-    bottom: 15px;
-    left: 100px;
-}
-
-.destination_one:hover>.sub_destination,
-.destination_two:hover>.sub_destination,
-.destination_three:hover>.sub_destination {
+    margin-top: 15px;
     display: block;
-    position: relative;
-}
-
-/* ==================== Top ==================== */
-aside a {
-    width: 25px;
-    height: 25px;
-    text-decoration: none;
-    transform: rotate(90deg);
-    background: var(--background-blue);
-    font-weight: bold;
-    border-radius: 25px;
-    display: table-cell;
-    vertical-align: middle;
-    box-sizing: border-box;
+    background: var(--bg-detalis);
+    width: 40px;
+    padding: 2px 10px;
     text-align: center;
-    z-index: 6;
-    
+    border: 1px solid var(--bor-detalis);
+    border-radius: 3px;
 }
 
-aside a:before {
-    content: "\003C";
-    color: var(--color-lightgray);
+/* ==================== Bottom back ==================== */
+.bottom_back {
+    position: fixed;
+    bottom: 310px;
+    right: 176px;
+}
+
+.bottom_back a {
+    background: url(".././img/sprite.png") no-repeat;
+    background-position: -160px 0;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-left: 14px;
+}
+
+/* ==================== Footer ==================== */
+.footer_list {
+    background: var(--bg-footer);
+    height: 134px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 140px;
+    box-sizing: border-box;
+}
+
+.footer_list a,
+.footer_list h4,
+.footer_list h5 {
+    text-decoration: none;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-family: var(--ff-opensans);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.footer_list h4 {
+    font-weight: normal;
+}
+
+.footer_list h5 {
+    text-transform: none;
+    font-weight: normal;
+    height: 20px;
+}
+
+.footer_list h5 + a {
+    text-transform: none;
+}
+
+/* ==================== Social icons ==================== */
+.social_links {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.social_links a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(".././img/sprite.png") no-repeat;
+    margin-left: 10px;
+}
+
+.twitter a {
+    background-position: 0 0;
+    margin-left: 0;
+}
+
+.facebook a {
+    background-position: -40px 0;
+}
+
+.googleplus a {
+    background-position: -80px 0;
+}
+
+.linkedin a {
+    background-position: -120px 0;
+}
+
+.footer h6 {
+    margin-top: 20px;
+    font-family: var(--ff-arial);
+    font-size: 12px;
+    color: var(--color-white);
+    font-weight: normal;
+    margin: 40px 0 10px;
+    text-align: center;
+}
+
+.social_links a:hover {
+    filter: invert(.7);
 }

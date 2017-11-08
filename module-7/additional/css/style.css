@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Dorsa");
+@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One");
+
+@font-face {
+    font-family: 'beldanormregular';
+    src: url('beldanormregular-webfont.woff2') format('woff2'),
+         url('beldanormregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ==================== Variable ==================== */
+:root {
+    /* Width */
+    --wrapper-width: 1024px;
+
+    /* Color */
+    --color-white: rgb(255, 255, 255);
+    --color-blue: rgb( 38, 53, 85);
+    --color-lightgray: rgb( 107, 116, 136);
+    --color-gray: rgb( 78, 80, 80);
+    --color-li: rgb( 56, 175, 229);
+    --color-black: rgb(0, 0, 0);
+    --color-blog-gray: rgb( 193, 187, 187);
+
+    /* Background */
+    --bg-white: rgb(255, 255, 255);
+    --bg-li: rgb( 56, 175, 229);
+    --bg-border-li: rgb( 82, 151, 182);
+    --bg-footer: rgb( 48, 69, 91);
+    --bg-detalis: rgb( 252, 246, 248);
+    --bg-comment: rgb( 233, 230, 230);
+    --bg-com-block: rgb( 252, 250, 250);
+
+    /* Border */
+    --bor-detalis: rgb( 193, 187, 187);
+
+
+    /* Font Family */
+    --ff-dorsa: "Dorsa";
+    --ff-pgo: "Pathway Gothic One";
+    --ff-arial: "Arial";
+    --ff-opensans: "OpenSans";
+}
+
+/* ==================== General ==================== */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {background: lightgray;}
+
+.wrapper {
+    width: var(--wrapper-width);
+    margin: auto;
+    box-sizing: border-box;
+    background: white;
+    padding: 20px;
+}
+
+/* ==================== Tipography content ==================== */
+/* ==================== h1-h6 ==================== */
+.wrapper h2 {
+    font-family: var(--ff-pgo);
+    font-size: 33px;
+    text-transform: uppercase;
+    color: var(--color-blue);
+}
+
+.post_content h4,
+.name_post h3 {
+    font-family: var(--ff-arial);
+    font-size: 16px;
+    color: var(--color-blue);
+    transition: font-size 1s linear;
+}
+
+.about_page h3,
+.testimonial h4 {
+    font-family: var(--ff-arial);
+    font-size: 15px;
+    color: var(--color-blue);
+}
+
+/* ==================== list ==================== */
+.categories_list li,
+.archive_list a,
+.article_offer li {
+    text-decoration: none;
+    font-family: var(--ff-arial);
+    font-size: 13px;
+    color: var(--color-blue);
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.wrapper_content ul {
+    list-style: none;
+}
+
+.categories_list li:before,
+.archive_list li:before,
+.article_offer li:before {
+    content: "\2192";
+    margin-right: 10px;
+    color: var(--color-li);
+}
+
+/* ==================== Paragraph ==================== */
+ 
+.post_content p,
+.about_page p,
+.testimonial h5 {
+    font-family: var(--ff-arial);
+    font-size: 13px;
+    color: var(--color-gray);
+    margin-top: 15px;
+}
+
+/* ==================== Links ==================== */
+
+.post_content a {
+    font-family: var(--ff-arial);
+    font-size: 13px;
+    color: var(--color-black);
+    text-decoration: none;
+    margin-top: 15px;
+    display: block;
+    background: var(--bg-detalis);
+    width: 40px;
+    padding: 2px 10px;
+    text-align: center;
+    border: 1px solid var(--bor-detalis);
+    border-radius: 3px;
+    transition: width 1s linear;
+}
+
+/* ==================== Task five ==================== */
+.post_content {
+    display: flex;
+}
+
+.post_content img {
+    width: 287px;
+    height: 225px;
+    padding: 0 10px 10px 0;
+    transform: rotate(0deg);
+    transition: transform 1.2s linear 300ms;
+}
+
+.post_two {
+    border-top: 1px solid var(--bor-detalis);
+    padding-top: 45px;
+}
+
+/* ==================== Animation ==================== */
+.post_content img:hover {
+    transform: rotate(45deg);
+}
+
+.post_content h4:hover {
+    font-size: 22px;
+}
+
+.post_content a:hover {
+    width: 80px;
+}

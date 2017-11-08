@@ -1,0 +1,88 @@
+/* ==================== Content ==================== */
+/* ==================== Blog page ==================== */
+.blog_page {
+    display: flex;
+}
+
+/* ==================== Blog post ==================== */
+.blog_post {
+    flex: 10;
+    margin-right: 50px;
+}
+
+.post_one {
+    margin: 45px 0;
+}
+
+.post_content {
+    display: flex;
+    flex-direction: row;
+}
+
+.post_content img {
+    width: 287px;
+    height: 225px;
+}
+
+.post_content div {
+    padding: 0 0 0 20px;
+}
+
+.header_post {
+    display: flex;
+    flex: row;
+}
+
+.post_one .date_post {
+    width: 31px;
+    height: 32px;
+    background: url(".././img/sprite.png") no-repeat;
+    background-position: -192px -1px;
+    margin-right: 10px;
+}
+
+.name_post {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+}
+
+.name_post h3 {
+    flex: 100%;
+    text-transform: uppercase;
+}
+
+.name_post p {
+    color: var(--color-blog-gray);
+    font-family: var(--ff-arial);
+    font-size: 13px;
+}
+
+.post_two {
+    border-top: 1px solid var(--bor-detalis);
+    padding-top: 45px;
+}
+
+.post_two .date_post {
+    width: 31px;
+    height: 32px;
+    background: url(".././img/sprite.png") no-repeat;
+    background-position: -224px -1px;
+    margin-right: 10px;
+}
+
+.archive_list li {
+    margin-top: 15px;
+}
+
+/* ==================== Blog aside ==================== */
+.blog_page aside {
+    flex: 3;
+}
+
+.categories_list ul,
+.archive_list ul {
+    margin: 45px 0;
+}
