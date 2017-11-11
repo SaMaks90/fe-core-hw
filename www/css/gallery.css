@@ -53,12 +53,13 @@
 .subgallery_item {
     width: 100%;
     height: 100%;
-    display: none;
     position: absolute;
     top: 0;
+    opacity: 0;
     background: url(".././img/gallery/zoom.png");
+    transition: opacity 0.8s linear;
 }
 
 .gallery_item:hover > .subgallery_item {
-    display: block;
+    opacity: 1;
 }

@@ -27,17 +27,23 @@
         <!-- Task two -->
         <div>
             <h2>Browse</h2>
-            <form action="#" method="get" class="browse">
-                <label>Browse by Tour Operator
-                    <select name="tour_operator" class="tour_operator">
-                        <option disabled selected>Browse by Tour Operator</option>
-                        <option value="operator1">Lorem, ipsum.</option>
-                        <option value="operator2">Lorem, ipsum dolor.</option>
-                        <option value="operator3">Lorem ipsum dolor sit.</option>
-                        <option value="operator4">Lorem ipsum dolor sit amet.</option>                        
-                    </select>
-                </label>
-                <input type="submit" value="Search">
+            <form action="#" method="get" class="browse_o">
+                <!-- <h2>Browse by Tour Operator</h2> -->
+                
+                <div class="browse" tabindex="1">
+                    <input class="browse_option" name="test" type="radio" id="browse_1" checked disabled>
+                    <label for="browse_1" class="browse_option_name">Oranges</label>
+                    <input class="browse_option" name="test" type="radio" id="browse_2">
+                    <label for="browse_2" class="browse_option_name">Apples</label>
+                    <input class="browse_option" name="test" type="radio" id="browse_3">
+                    <label for="browse_3" class="browse_option_name">Grapefruit</label>
+                    <input class="browse_option" name="test" type="radio" id="browse_4">
+                    <label for="browse_4" class="browse_option_name">Bananas</label>
+                    <input class="browse_option" name="test" type="radio" id="browse_5">
+                    <label for="browse_5" class="browse_option_name">Watermelon</label>
+                </div>
+
+                <input type="submit" value="Search" class="browse_but">
             </form>
             <h2>Search</h2>
             <form action="#" method="get" class="search">

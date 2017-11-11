@@ -1,0 +1,104 @@
+/* ==================== Content ==================== */
+/* ==================== Contact page ==================== */
+.contact_page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_page h2 + div{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 35px;    
+}
+
+.contact_page article {
+    flex: 11;
+    margin-right: 30px;
+}
+
+.contact_page aside {
+    flex: 3;
+}
+
+/* ==================== Table contacts ==================== */
+.table_contacts {
+    font-family: var(--ff-arial);
+    font-size: 14px;
+    color: rgb( 102, 101, 101);
+}
+
+.table_contacts a {
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb( 102, 101, 101);
+}
+
+.table_contacts table {
+    margin-bottom: 40px;
+    width: 200px;
+}
+
+.table_contacts tr:nth-last-of-type(1) a {
+    color: rgb( 250, 126, 126);
+}
+
+.table_contacts caption {
+    text-align: left;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.table_contacts td:nth-last-of-type(1) {
+    text-align: right;
+}
+
+/* ==================== Aside ==================== */
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.contact input,
+.contact textarea {
+    color: var(--color-blue);
+    font-size: 14px;
+    font-family: var(--ff-arial);
+    background: var(--bg-com-block);
+    height: 28px;
+    outline: none;
+    padding: 5px;
+    border: 1px solid rgb( 212, 208, 208);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.buttoms input {
+    width: 80px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.buttoms input:hover {
+    cursor: pointer;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: var(--color-blue);
+    font-size: 14px;
+    font-family: var(--ff-arial);
+    text-transform: uppercase;
+}
+
+.contact textarea {
+    height: 120px;
+    padding: 10px 5px;
+}
+
+.buttoms {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}

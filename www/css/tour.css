@@ -1,0 +1,133 @@
+/* ==================== Content ==================== */
+/* ==================== Tours page ==================== */
+.tours_page {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* ==================== Tours ==================== */
+.tours {
+    flex: 10;
+    margin-right: 50px;
+}
+
+.tour {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.tour img {
+    width: 133px;
+    height: 114px;
+    margin-right: 15px;
+}
+
+.block_tour {
+    margin-top: 30px;
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.block_tour article {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    text-transform: uppercase;
+    color: var(--color-li);
+    font-size: 16px;
+    font-family: var(--ff-arial);
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+/* ==================== Aside ==================== */
+.tours_page aside {
+    flex: 3;
+}
+
+.browse,
+.search {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+
+.browse input,
+.search input {
+    color: var(--color-blue);
+    font-size: 14px;
+    font-family: var(--ff-arial);
+    background: var(--bg-com-block);
+    height: 28px;
+    outline: none;
+    padding: 5px;
+    border: 1px solid rgb( 212, 208, 208);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 80px;
+    margin-top: 60px;    
+}
+
+.browse input:hover,
+.search input:hover {
+    cursor: pointer;
+}
+
+.tour_operator {
+    width: 200px;
+}
+
+.tour_operator,
+.destination_search,
+.departing,
+.price_search,
+.duration {
+    margin-top: 5px;
+    background: var(--bg-com-block);
+    color: rgb( 134, 143, 143);
+    outline: none;
+    border: 1px solid rgb( 222, 219, 219);
+    font-size: 12px;    
+}
+
+.tour_operator option,
+.destination_search option,
+.departing option,
+.price_search option,
+.duration option {
+    background: rgb( 227, 226, 226);
+    color: var(--color-white);
+}
+
+.search label:nth-of-type(1) {
+    text-transform: capitalize;
+    font-size: 12px;
+    font-family: var(--ff-arial);
+    color: var(--color-li);
+    margin-bottom: 5px;
+}
+
+.search label {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-family: var(--ff-arial);
+    color: var(--color-gray);
+}
+
+.browse label {
+    font-size: 12px;
+    font-family: var(--ff-arial);
+    color: var(--color-gray);
+}
+
+.search label:nth-of-type(n+3) {
+    margin-top: 20px;
+}

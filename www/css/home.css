@@ -204,3 +204,276 @@
     color: var(--color-black);
     background: var(--bg-comment);
 }
+
+/* ==================== News block ==================== */
+/* ==================== Tab-1 ==================== */
+.news_block {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ==================== Tab post ==================== */
+@keyframes tabPost1 {
+    0% { 
+        background: url(".././img/home/tabs/tab_1/post_01.jpg");
+        background-size: cover;
+    }
+    50% { 
+        background: url(".././img/home/tabs/tab_1/post_02.jpg");
+        background-size: cover;        
+    }
+    100% { 
+        background: url(".././img/home/tabs/tab_1/post_03.jpg");
+        background-size: cover;        
+    }
+}
+
+@keyframes tabPost2 {
+    0% { 
+        background: url(".././img/home/tabs/tab_1/post_11.jpg");
+        background-size: cover;
+    }
+    50% { 
+        background: url(".././img/home/tabs/tab_1/post_12.jpg");
+        background-size: cover;        
+    }
+    100% { 
+        background: url(".././img/home/tabs/tab_1/post_13.jpg");
+        background-size: cover;        
+    }
+}
+
+.image_anim_1 {
+    flex: 4;
+    height: 105px;
+    margin-right: 30px;
+    animation: tabPost1 6s linear infinite alternate;
+}
+
+.image_anim_2 {
+    flex: 4;
+    height: 105px;
+    margin-right: 30px;
+    animation: tabPost2 6s linear infinite alternate;
+}
+
+.tab_post_1,
+.tab_post_2 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px 0;
+}
+
+.tab_post_1 article,
+.tab_post_2 article {
+    flex: 10;
+}
+
+
+/* ==================== Tab panel widget ==================== */
+
+.tabPanel-widget {
+    position: relative;
+    margin-right: 40px;
+    flex: 10;
+}
+
+.wrapper_content .tabPanel-widget h2,
+.wrapper_content .newsletter h2 {
+    font-size: 20px;
+    display: block;
+    width: 126px;
+    height: 30px;
+    box-sizing: border-box;
+    padding-top: 3px;
+}
+
+/* ==================== Label ==================== */
+.tabPanel-widget > label {
+    position: absolute;
+    z-index: 1;
+    width: 126px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.tabPanel-widget > label {
+    border: 1px solid rgb( 222, 219, 219);
+}
+
+.tabPanel-widget h2 {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    color: var(--color-lightgray);
+    background: var(--bg-com-block);
+    color: #fff;
+}
+
+.tabPanel-widget label:nth-child(1),
+.tabPanel-widget h2:nth-child(3) {
+    left: 0;
+    top: 1px;
+}
+
+.tabPanel-widget label:nth-child(5),
+.tabPanel-widget h2:nth-child(7) {
+    left: 125px;
+}
+
+.tabPanel-widget label:nth-child(9),
+.tabPanel-widget h2:nth-child(11) {
+    left: 250px;
+}
+
+.tabPanel-widget input,
+.tabPanel-widget label {
+    outline: none;    
+}
+
+.tabPanel-widget input,
+.tabPanel-widget > label ~ label,
+.tabPanel-widget > h2 ~ h2 {
+    position: absolute;
+    top: 1px;
+}
+
+.tabPanel-widget input + h2 + div {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+}
+
+.tabPanel-widget input:checked + h2 + div {
+    position: static !important;
+    padding: 16px !important;
+    height: 396px !important; 
+    width: auto !important; 
+    box-sizing: border-box;
+}
+
+.tabPanel-widget label:hover {
+    cursor: pointer;
+}
+
+.tabPanel-widget input[name="tabs"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.tabPanel-widget input[name="tabs"]:checked + h2 {
+    background: var(--bg-white);
+    color: rgb( 56, 175, 229 );
+}
+
+.tabPanel-widget > div {
+    border: 1px solid rgb( 222, 219, 219); 
+}
+
+.tabPanel-widget h4 {
+    font-size: 15px;
+    font-family: var(--ff-arial);
+    color: var(--color-blue);
+}
+
+.tab_post h5 > a {
+    font-size: 13px;
+    font-family: var(--ff-arial);
+    color: rgb(250, 126, 126);
+    text-decoration: none;
+    padding-right: 5px;
+}
+
+.tab_post p,
+.tab_post h5 {
+    margin: 15px 0;
+}
+
+.tab_post p {
+    font-size: 13px;
+    font-family: var(--ff-arial);
+    color: var(--color-gray);
+}
+
+.tab_post h5 {
+    font-size: 13px;
+    font-family: var(--ff-arial);
+}
+
+/* ==================== News letter ==================== */
+.newsletter {
+    border: 1px solid rgb( 222, 219, 219);
+    flex: 3;
+}
+
+.news_block .newsletter h2 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgb( 222, 219, 219); 
+    background: var(--bg-com-block);
+}
+
+.news {
+    padding: 15px;
+}
+
+.news input {
+    margin: 15px 0;
+}
+
+.news a {
+    font-size: 13px;
+    font-family: var(--ff-arial);
+    color: var(--color-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news input {
+    outline: none;
+    border-radius: 3px;
+    height: 26px;
+    box-sizing: border-box;
+    border: 1px solid rgb( 226, 223, 223);
+    padding: 0 5px;
+    font-size: 13px;
+    font-family: var(--ff-arial);
+    color: rgb( 134, 143, 143 );
+}
+
+.news input::placeholder {
+    font-size: 13px;
+    font-family: var(--ff-arial);
+    color: rgb( 134, 143, 143 );
+}
+
+.newsletter li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: var(--ff-arial);
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
+.newsletter_list li::before {
+    content: "\003E";
+    margin-right: 8px;
+    background: var(--bg-li);
+    display: block;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 9px;
+    color: var(--color-white);
+    font-size: 13px;
+}
+  
