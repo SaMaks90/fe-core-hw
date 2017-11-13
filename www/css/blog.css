@@ -52,7 +52,6 @@
 
 .header_post {
     display: flex;
-    flex: row;
 }
 
 .post_one .date_post {
