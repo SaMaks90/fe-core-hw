@@ -1,0 +1,23 @@
+.content {
+    background: yellow;
+    height: 50px;
+}
+
+.asidebar {
+    background: green;
+    height: 50px;
+}
+
+.item_one {
+    background: purple;
+    height: 50px;
+}
+
+.item_two {
+    background: lightpink;
+    height: 50px;
+}
+
+.top {
+    margin-top: 50px;
+}
